@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; 
+}
+
+header {
+    background-color: #808080; 
+    padding: 20px 60px; 
+    text-align: right; 
+}
+
+nav ul {
+    list-style: none;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 40px;
+}
+
+nav ul li:first-child {
+    margin-left: 0; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; 
+    font-size: 1.2rem;
+}
+
+.hero {
+    background-color: #808080;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    margin: 30px;
+    color: #333;
+    margin-bottom: 300px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+}
+
+/* Estilos para la sección "Quiénes Somos" */
+.quienes-somos {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    height: 90vh;
+}
+
+/* Estilos para el título "Quiénes Somos" */
+.titulo {
+    font-size: 4rem;
+}
+
+/* Estilos para el contenedor de video e información */
+.contenedor-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* Estilos para el contenedor del video */
+.video-container {
+    width: 500px;
+    height: 400px;
+    background-color: #f0f0f0;
+    position: relative;
+}
+
+/* Estilos para el ícono de reproducción */
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 0 20px 40px;
+    border-color: transparent transparent transparent #0e4bae; /* Color azul para el ícono de reproducción */
+}
+
+/* Estilos para el contenedor de información */
+.informacion-container {
+    width: 500px;
+    height: 400px;
+    background-color: #f0f0f0;
+    margin-left: 40px; /* Espacio entre el video y la información */
+    padding: 20px;
+}
+
+/* Estilos para el párrafo dentro del contenedor de información */
+.informacion-container p {
+
+    font-size: 1.2rem;
+    color: #666;
+    margin: 0;
+}
+
+/*SECTION PRODUCTOS*/
+.productos {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #808080;
+    height: 90vh;
+}
+
+.productos h2 {
+    font-size: 4rem;
+}
+
+.categorias {
+    margin-top: -20px; 
+    color: #0e4bae;
+}
+
+.categorias .categoria {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: 2px solid #cccccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+    background-color: #808080;
+}
+
+.producto {
+    width: calc(30% - 20px); /* Calcula el ancho para que haya espacio entre los elementos */
+    height: 200px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin: 10px;
+    box-sizing: border-box; /* Incluye el borde y el margen en el cálculo del tamaño */
+}
