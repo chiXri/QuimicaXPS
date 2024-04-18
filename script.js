@@ -8,6 +8,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+/*
+let slideIndex = 0;
+const slides = document.querySelectorAll('.slides');
+
+function showSlides() {
+    slideIndex++;
+    if (slideIndex >= slides.length) {
+        slideIndex = 0;
+    }
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+    }
+
+    slides[slideIndex].style.display = 'block';
+    setTimeout(showSlides, 2000000); // Cambia cada 2 segundos (2000 milisegundos)
+}
+
+showSlides();
+*/
 document.addEventListener('DOMContentLoaded', function() {
     const categorias = document.querySelectorAll('.categoria');
     categorias.forEach(categoria => {
