@@ -20,7 +20,6 @@
 
     <section class="hero">
         <div class="hero-content">
-            <!--Aqui añadiremos la img del hero.-->
             <h1>QuimicaXPS</h1>
             <h2>Excelencia en productos químicos</h2>
         </div>
@@ -39,26 +38,84 @@
     <section class="productos" id="productos">
         <h2>Productos</h2>
         <div class="categorias">
-            <div class="categoria" id="disolvente" style="background-color: white;">Disolvente</div>
-            <div class="categoria" id="compuesto"style="background-color: white;" >Compuesto</div>
-            <div class="categoria" id="emulsiones"style="background-color: white;">Emulsiones</div>
-            <div class="categoria" id="resinas"style="background-color: white;">Resinas</div>
+            <div class="categoria" data-category="disolvente">Disolvente</div>
+            <div class="categoria" data-category="compuesto">Compuesto</div>
+            <div class="categoria" data-category="emulsiones">Emulsiones</div>
+            <div class="categoria" data-category="resinas">Resinas</div>
         </div>
         <div class="productos-container">
-            <!-- Cuadrados de productos -->
-           
-            <div class="producto"></div>
-            <div class="producto"></div>
-            <div class="producto"></div>
-            <div class="producto"></div>
-            <div class="producto"></div>
-            <div class="producto"></div>
+            <div class="producto disolvente">Producto 1 (Disolvente)</div>
+            <div class="producto disolvente">Producto 2 (Disolvente)</div>
+            <div class="producto disolvente">Producto 3 (Disolvente)</div>
+            <div class="producto disolvente">Producto 4 (Disolvente)</div>
+            <div class="producto compuesto">Producto 1 (Compuesto)</div>
+            <div class="producto compuesto">Producto 2 (Compuesto)</div>
+            <div class="producto compuesto">Producto 3 (Compuesto)</div>
+            <div class="producto compuesto">Producto 4 (Compuesto)</div>
+            <div class="producto emulsiones">Producto 1 (Emulsiones)</div>
+            <div class="producto emulsiones">Producto 2 (Emulsiones)</div>
+            <div class="producto emulsiones">Producto 3 (Emulsiones)</div>
+            <div class="producto emulsiones">Producto 4 (Emulsiones)</div>
+            <div class="producto resinas">Producto 1 (Resinas)</div>
+            <div class="producto resinas">Producto 2 (Resinas)</div>
+            <div class="producto resinas">Producto 3 (Resinas)</div>
+            <div class="producto resinas">Producto 4 (Resinas)</div>
         </div>
     </section>
     
+    <section class="galeria" id="galeria">
+        <h1 class="titulo">Galería</h1>
+        <div class="galeria-container">
+            <div class="fila">
+                <div class="recuadro"></div>
+                <div class="recuadro"></div>
+                <div class="recuadro"></div>
+                <div class="recuadro"></div>
+            </div>
+            <div class="fila">
+                <div class="recuadro"></div>
+                <div class="recuadro"></div>
+                <div class="recuadro"></div>
+                <div class="recuadro"></div>
+            </div>
+            <div class="fila">
+                <div class="recuadro"></div>
+                <div class="recuadro"></div>
+                <div class="recuadro"></div>
+                <div class="recuadro"></div>
+            </div>
+        </div>
+    </section>
+    <section id="contacto" class="container-contacto">
+        <div class="titulo-contacto">
+            <h2>Contáctame</h2>
+        </div>
+        <div class="fila-contacto">
+            <div class="ubicacion">
+                <img src="ubicacion.png" alt="Ubicación de la empresa">
+            </div>
+            <div class="formulario-contacto">
+                <form action="#" method="post">
+                    <label for="nombre" style="margin-left: 10px;">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+        
+                    <label for="email" style="margin-left: 10px;">Email:</label>
+                    <input type="email" id="email" name="email" required>
+        
+                    <label for="Asunto" style="margin-left: 10px;">Asunto:</label>
+                    <input type="text" id="Asunto" name="Asunto" required>
+        
+                    <label for="mensaje" style="margin-left: 10px;">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        
+                    <input type="submit" value="Enviar" style="margin-left: 10px;">
+                </form>
+            </div>
+        </div>
+    </section>
     
     <footer>
-      
+        <p>&copy;QuimicaXPS</p>
     </footer>
     <script src="/script.js"></script>
 </body>
