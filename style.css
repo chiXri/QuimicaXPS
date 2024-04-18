@@ -67,18 +67,17 @@ nav ul li a {
 
 /* Seccion "Quiénes Somos" */
 .quienes-somos {
-    background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px;
-    height: 90vh;
+    height: 100vh;
 }
 
 
 .titulo {
     font-size: 4rem;
+    margin-bottom: 0px;
 }
 
 
@@ -89,52 +88,65 @@ nav ul li a {
     margin-top: 50px;
 }
 
-
 .video-container {
     width: 500px;
     height: 400px;
     background-color: #f0f0f0;
     position: relative;
+    overflow: hidden; /* Para recortar cualquier contenido que se desborde */
 }
 
-
-.play-icon {
+.play-video {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 20px 0 20px 40px;
-    border-color: transparent transparent transparent #0e4bae; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#video-laboratorio {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para ajustar el tamaño del video manteniendo la relación de aspecto */
 }
 
 
 .informacion-container {
     width: 500px;
     height: 400px;
-    background-color: #f0f0f0;
     margin-left: 40px; 
     padding: 20px;
 }
 
 
 .informacion-container p {
-
     font-size: 1.2rem;
     color: #666;
     margin: 0;
 }
 
 /*SECTION PRODUCTOS*/
+
 .productos {
     padding: 70px 0;
     text-align: center;
-    background-color: #808080;
     height: 90vh;
+    position: relative; /* Añade posición relativa para que los elementos absolutos se posicionen en relación a este contenedor */
+}
+
+.productos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: url("/img/img/productos.jpeg");
-    
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    filter: opacity(0.3); /* Reduce la opacidad de la imagen de fondo al 50% */
+    z-index: -1; /* Coloca la imagen de fondo detrás de los otros elementos */
 }
 
 .productos h2 {
@@ -153,6 +165,27 @@ nav ul li a {
     border: 2px solid #cccccc;
     border-radius: 5px;
     cursor: pointer;
+}
+
+/* Estilo cuando se pasa el ratón por encima */
+.categorias .categoria:hover {
+    background-color: #0e4bae;
+    color: #ffffff;
+}
+
+/* Estilo para la categoría seleccionada */
+.selected {
+    background-color: #0e4bae;
+    color: #ffffff;
+}
+
+/* Estilo para ocultar los productos que no corresponden a la categoría seleccionada */
+.producto {
+    display: none;
+}
+
+.producto.mostrar {
+    display: block;
 }
 .productos-container {
     display: flex;
