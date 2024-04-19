@@ -1,3 +1,7 @@
+
+
+
+
 // Script para el desplazamiento suave al hacer clic en los enlaces del menú
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

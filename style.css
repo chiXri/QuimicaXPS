@@ -5,17 +5,30 @@ body {
     font-family: '';
     position: relative; /* Añadido */
 }
+html {
+    scroll-behavior: smooth;
+}
+
 
 /* HEADER */
 
-
 header {
-    background-color: transparent;
-   
+    width: 100%;
+    background-color: transparent;   
     text-align: right;
-    position: relative;
     z-index: 2;
 }
+nav {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top:0;
+    z-index: 5;
+    transition-property: top;
+    transition-duration: 0.75s;
+    transform: translateY(-5px); /* Desplaza hacia arriba 5px al pasar el mouse */
+}
+
 
 nav ul {
     list-style: none;
@@ -23,16 +36,31 @@ nav ul {
     padding: 0;
 }
 
+
 nav ul li {
+    margin-right: 40px; /* Reduje el margen para mayor espacio */
     display: inline;
-    margin-right: 40px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
+    text-decoration:none;
+    color: rgba(0, 0, 0, 0.8);
     font-size: 1.2rem;
+    font-weight:500; 
+    padding: 10px 15px;
+    transition: all 0.5s ease; 
 }
+
+
+nav ul li a:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgba(22, 102, 194, 0.5);
+    transition: all 0.3s ease;
+    border-radius: 40px;
+    transform: scale(2.1); 
+}
+
+
 
 /* Section heroimage */
 .hero-image {
@@ -71,11 +99,13 @@ nav ul li a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
     height: 100vh;
 }
 
 
 .titulo {
+    margin-top: 0px;
     font-size: 4rem;
     margin-bottom: 0px;
 }
@@ -116,6 +146,7 @@ nav ul li a {
     height: 400px;
     margin-left: 40px; 
     padding: 20px;
+ 
 }
 
 
@@ -161,9 +192,10 @@ nav ul li a {
 
 .categorias .categoria {
     display: inline-block;
+    width: 70px;
     margin: 0 10px;
     padding: 10px 20px;
-    border: 2px solid #cccccc;
+    border: 2px solid #0e4bae;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -197,7 +229,7 @@ nav ul li a {
 
 .producto {
     width: 300px; /* Ancho del producto para tres productos por fila */
-    height: 250px;
+    height: 300px;
     border: 1px solid #ccc;
     margin: 10px;
     box-sizing: border-box;
@@ -212,39 +244,45 @@ nav ul li a {
 }
 
 /*SECTION GALERIA*/
-
-.galeria {
-    text-align: center;
-    padding: 50px 0;
-    height: 90vh;
-
-}
-
-.galeria .titulo {
-    font-size: 4rem;
-}
-
 .galeria-container {
+    text-align: center;
+    height:90vh;
+    padding: 70px 0;
+    
+}
+
+.titulo {
+    font-size: 4rem;
+    color: rgb(0, 0, 0);
+}
+
+ .galeria{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 10px;
 }
+
 
 .fila {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
 }
-
 .recuadro {
-    width: 200px;
+    width: 250px;
     height: 200px;
     background-color: white;
     border: 1px solid #ccc;
     margin: 0 10px;
 }
+.recuadro img {
+    width: 100%; /* Ancho al 100% del contenedor */
+    height: 100%; /* Altura al 100% del contenedor */
+    object-fit: cover; /* Ajustar la imagen al contenedor sin distorsionar */
+}
+
 /*CONTACTO*/
 /* Estilos para la sección de contacto */
 
@@ -254,9 +292,8 @@ nav ul li a {
     align-items: center;
     justify-content: center;
     height: 90vh;
-    margin-top: 400px;
-    margin-left: 10%;
-    margin-right: 10%;
+   
+
 }
 
 .titulo-contacto {
@@ -269,7 +306,7 @@ nav ul li a {
 }
 
 .ubicacion {
-    width: 300px; /* Ancho del contenedor de ubicación */
+    width: 100%;
     height: 423px;
     background-color: #fff;
     border: 1px solid #ccc;
