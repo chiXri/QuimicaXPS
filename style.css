@@ -2,8 +2,9 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: '';
+    font-family: 'Poppins', sans-serif;
     position: relative; /* Añadido */
+    
 }
 
 /* HEADER */
@@ -72,12 +73,14 @@ nav ul li a {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin-top: 0;
 }
 
 
 .titulo {
     font-size: 4rem;
     margin-bottom: 0px;
+    margin-top: 0;
 }
 
 
@@ -120,9 +123,10 @@ nav ul li a {
 
 
 .informacion-container p {
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     color: #666;
     margin: 0;
+    width: 700px;
 }
 
 /*SECTION PRODUCTOS*/
@@ -189,19 +193,27 @@ nav ul li a {
 }
 .productos-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en filas */
     justify-content: center;
     margin-top: 40px;
 }
 
 .producto {
-    width: calc(30% - 20px); 
-    height: 200px;
-    background-color: #fff;
+    width: 300px; /* Ancho del producto para tres productos por fila */
+    height: 250px;
     border: 1px solid #ccc;
     margin: 10px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden; /* Ocultar cualquier contenido que se desborde */
 }
+
+.producto img {
+    width: 100%; /* Ancho al 100% del contenedor */
+    height: 100%; /* Altura al 100% del contenedor */
+    object-fit: cover; /* Ajustar la imagen al contenedor sin distorsionar */
+}
+
 /*SECTION GALERIA*/
 
 .galeria {
