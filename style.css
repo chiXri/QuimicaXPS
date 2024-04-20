@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: '';
+    font-family:'Poppins', sans-serif;
     position: relative; /* Añadido */
 }
 html {
@@ -83,7 +83,7 @@ nav ul li a:hover {
 }
 
 .hero-content h1 {
-    font-size: 4rem;
+    font-size: 8rem;
     margin-bottom: 10px;
 }
 
@@ -151,12 +151,11 @@ nav ul li a:hover {
 
 
 .informacion-container p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #666;
     margin: 0;
 }
 
-/*SECTION PRODUCTOS*/
 /*SECTION PRODUCTOS*/
 
 .productos {
@@ -192,7 +191,7 @@ nav ul li a:hover {
 
 .categorias .categoria {
     display: inline-block;
-    width: 70px;
+    width: 80px;
     margin: 0 10px;
     padding: 10px 20px;
     border: 2px solid #0e4bae;
@@ -242,13 +241,42 @@ nav ul li a:hover {
     height: 100%; /* Altura al 100% del contenedor */
     object-fit: cover; /* Ajustar la imagen al contenedor sin distorsionar */
 }
+.info-producto {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 8px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    transition: bottom 0.3s ease, opacity 0.3s ease;
+}
 
-/*SECTION GALERIA*/
+.producto:hover .info-producto {
+    bottom: 0;
+    opacity: 1;
+}
+
+.info-producto i {
+    font-size: 24px;
+    margin-right: 5px;
+    transition: transform 0.3s ease;
+}
+
+.producto:hover .info-producto i {
+    transform: scale(1.2);
+}
+/*galeria container*/
+
 .galeria-container {
     text-align: center;
-    height:90vh;
+    height: 90vh;
     padding: 70px 0;
-    
 }
 
 .titulo {
@@ -256,20 +284,20 @@ nav ul li a:hover {
     color: rgb(0, 0, 0);
 }
 
- .galeria{
+.galeria {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    margin-top: -10px;
 }
-
 
 .fila {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
 }
+
 .recuadro {
     width: 250px;
     height: 200px;
@@ -277,11 +305,67 @@ nav ul li a:hover {
     border: 1px solid #ccc;
     margin: 0 10px;
 }
+
 .recuadro img {
-    width: 100%; /* Ancho al 100% del contenedor */
-    height: 100%; /* Altura al 100% del contenedor */
-    object-fit: cover; /* Ajustar la imagen al contenedor sin distorsionar */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
+
+.modal-imagen {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.imagen-ampliada {
+    display: block;
+    margin: 0 auto;
+    max-width: 90%;
+    max-height: 90%;
+    margin-top: 10vh;
+}
+
+.navegacion-imagen {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.boton-navegacion {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 36px; /* Tamaño de fuente */
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 10px; /* Espaciado interno */
+}
+
+.boton-navegacion:hover {
+    color: #0e4bae;
+}
+
+.close {
+    color: #fff;
+    font-size: 24px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+}
+
+
+
 
 /*CONTACTO*/
 /* Estilos para la sección de contacto */
@@ -292,31 +376,33 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     height: 90vh;
-   
-
 }
-
-.titulo-contacto {
+.titulo-contacto{
     font-size: 4rem;
-    margin-bottom: 20px; /* Espacio entre el título y los contenedores */
+    color: rgb(0, 0, 0);
+    margin-top: 0;
 }
 
 .fila-contacto {
     display: flex;
+    margin-top: -30px;
 }
 
 .ubicacion {
-    width: 100%;
-    height: 423px;
+    width: 350px;
+    height: 470.5px;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 10px;
     flex-shrink: 0;
-    margin-right: 160px;
+    margin-right: 100px;
     }
+
+
 
 .formulario-contacto {
     width:400px; /* Ancho del formulario */
+    height: 470.5px;
     background-color: #f4f4f4;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -354,9 +440,75 @@ nav ul li a:hover {
 .formulario-contacto form input[type="submit"]:hover {
     background-color: #416FFF; /* Color de fondo del botón al pasar */
 }
+
+/*MODALCONTACTO*/
+
+/* Estilos para el modal */
+.modal {
+    margin-left: 950px;
+    margin-bottom: 500px;
+    z-index: 9999;
+    background-color: #87CEEB; /* Color de fondo azul cielo */
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 400px;
+    height: 475.5px;
+    text-align: center;
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Centra completamente */
+    margin-top: -300px;
+}
+#myModal {
+    display: none;
+    /* Otros estilos... */
+}.modal-content {
+    margin: auto;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+/* Estilos para el botón de cerrar */
+.close {
+    color: #888;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: -10px; /* Ajusta la posición verticalmente */
+    right: -10px; /* Ajusta la posición horizontalmente */
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+}
+
+.opciones button {
+    background-color: #0d47f5; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 12px 20px; /* Espaciado interno */
+    cursor: pointer; /* Cursor al pasar */
+    font-family: 'Poppins', Arial, sans-serif; /* Tipo de fuente */
+    font-size: 16px; /* Tamaño de fuente */
+    margin-right: 10px; /* Espacio entre los botones */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.opciones button:hover {
+    background-color: #416FFF; /* Color de fondo del botón al pasar */
+}
+
+.opciones button:last-child {
+    background-color: #FF5252; /* Color de fondo del botón Cancelar */
+}
+
+.opciones button:last-child:hover {
+    background-color: #FF6E6E; /* Color de fondo del botón Cancelar al pasar */
+}
 /*FOOTER*/
 footer {
-    margin-top: 300px;
     background-color: #333; /* Color de fondo del footer */
     color: #fff; /* Color del texto */
     padding: 20px; /* Espaciado interno */

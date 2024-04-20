@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuimicaXPS</title>
     <link rel="stylesheet" href="/style.css">
+    <!--font poppins-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <!--Iconos-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+
 </head>
 <body>
-
+    <!--SECTION HEADER-->
         <header id="inicio">
             <div class="hero-image">
                 <nav>
@@ -26,9 +31,8 @@
                 </div>
             </div>
         </header>
-    
    
-
+    <!--SECTION QUIENES SOMOS-->
     <section class="quienes-somos" id="quienes-somos">
         <h2 class="titulo">Quiénes Somos</h2>
         <div class="contenedor-info">
@@ -36,10 +40,9 @@
                 <div class="play-video">
                     <video src="/img/laboratorio-video.mp4" id="video-laboratorio" controls autoplay ></video>
                 </div>
-
             </div>
             <div class="informacion-container">
-                <p style="margin-top: 30px;">
+                <p style="margin-top: 10px;">
                 Química.XPS es una empresa dedicada a la distribución y comercialización de productos químicos.
                 Su marca de identidad está fundamentada en el conocimiento de su actividad y una vocación clara y decidida de servicio hacia sus clientes y proveedores.
                 Productores europeos de reconocido prestigio en el sector químico han confiado en nosotros como distribuidor de sus productos.
@@ -51,6 +54,7 @@
         </div>
     </section>
 
+    <!--SECTION PRODUCTOS-->
     <section class="productos" id="productos">
       <div class="fondo-productos">
         <h2>Productos</h2>
@@ -60,89 +64,163 @@
             <div class="categoria" data-category="resinas">Resinas</div>
         </div>
         <div class="productos-container">
-            <div class="producto disolvente"><img src="/img/disolventes/disolvente-multiusos1.jpg" alt="multiusos-1"></div>
-            <div class="producto disolvente"><img src="/img/disolventes/disolvente2.jpeg" alt="disolvente-2"></div>
-            <div class="producto disolvente"><img src="/img/disolventes/disolvente3.jpeg" alt="disolvente-3"></div>
-            <div class="producto disolvente"><img src="/img/disolventes/disolvente4.jpeg" alt="disolvente-4"></div>
-            <div class="producto emulsiones"><img src="/img/emulsiones/antiesuma1.jpeg" alt="e-antiespuma"></div>
-            <div class="producto emulsiones"><img src="/img/emulsiones/disisperante2.jpeg" alt="e-disisperante"></div>
-            <div class="producto emulsiones"><img src="/img/emulsiones/mortero3.jpeg" alt="e-mortero"></div>
-            <div class="producto resinas"><img src="/img/resinas/resinasTransparente1.jpg" alt="r-transparente"></div>
-            <div class="producto resinas"><img src="/img/resinas/resinaTr2.jpg" alt="tr"></div>
-            <div class="producto resinas"><img src="/img/resinas/resinasUltra3.jpg" alt="r-ultra"></div>
-            <div class="producto resinas"><img src="/img/resinas/resinaAclilica5.jpg" alt="r-aclilica"></div>
+            <div class="producto disolvente" onclick="mostrarPrecio(this)">
+                <img src="/img/disolventes/disolvente-multiusos1.jpg" alt="multiusos-1">
+                <div class="info-producto">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="precio">10&euro;</span>
+                </div>
+            </div>
+            <div class="producto disolvente" onclick="mostrarPrecio(this)">
+                <img src="/img/disolventes/disolvente2.jpeg" alt="disolvente-2">
+                <div class="info-producto">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="precio">15.50&euro;</span>
+                </div>
+            </div>
+            <div class="producto disolvente" onclick="mostrarPrecio(this)">
+                <img src="/img/disolventes/disolvente3.jpeg" alt="disolvente-3">
+                <div class="info-producto">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="precio">20.75&euro;</span>
+                </div>
+            </div>
+            <div class="producto disolvente" onclick="mostrarPrecio(this)">
+                <img src="/img/disolventes/disolvente4.jpeg" alt="disolvente-4">
+                <div class="info-producto">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="precio">40.50&euro;</span>
+                </div>
+            </div>
+            <div class="producto emulsiones"><img src="/img/emulsiones/antiesuma1.jpeg" alt="e-antiespuma">
+                <div class="info-producto">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="precio">25&euro;</span>
+                </div></div>
+            <div class="producto emulsiones"><img src="/img/emulsiones/disisperante2.jpeg" alt="e-disisperante">
+                <div class="info-producto">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="precio">30.99&euro;</span>
+                </div></div>
+            <div class="producto emulsiones"><img src="/img/emulsiones/mortero3.jpeg" alt="e-mortero">
+                <div class="info-producto">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="precio">18.99&euro;</span>
+                </div></div>
+            <div class="producto resinas"><img src="/img/resinas/resinasTransparente1.jpg" alt="r-transparente">  <div class="info-producto">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="precio">45.50&euro;</span>
+            </div></div>
+            <div class="producto resinas"><img src="/img/resinas/resinaTr2.jpg" alt="tr"> <div class="info-producto">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="precio">35&euro;</span>
+            </div></div>
+            <div class="producto resinas"><img src="/img/resinas/resinasUltra3.jpg" alt="r-ultra">
+                <div class="info-producto">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="precio">12.99&euro;</span>
+                </div></div>
+            <div class="producto resinas"><img src="/img/resinas/resinaAclilica5.jpg" alt="r-aclilica">
+                <div class="info-producto">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="precio">155.99&euro;</span>
+                </div>
+            </div>
         </div>
     </div>
-   
     </section>
-    
-    <section class="galeria-container" id="galeria" >
+
+    <!--SECTION GALERIA-->
+    <section class="galeria-container" id="galeria">
         <h1 class="titulo">Galería</h1>
         <div class="galeria">
             <div class="fila">
                 <div class="recuadro">
-                    <img src="/img/galeria/galeria1.jpeg" alt="laboratorio1">
+                    <img src="/img/galeria/galeria1.jpeg" alt="laboratorio1" onclick="mostrarImagen(0)">
                 </div>
                 <div class="recuadro">
-                    <img src="/img/galeria/galeria2.jpeg" alt="laboratorio1">
+                    <img src="/img/galeria/galeria2.jpeg" alt="laboratorio2" onclick="mostrarImagen(1)">
                 </div>
                 <div class="recuadro">
-                    <img src="/img/galeria/galeria3.jpeg" alt="laboratorio1">
+                    <img src="/img/galeria/galeria3.jpeg" alt="laboratorio3" onclick="mostrarImagen(2)">
                 </div>
             </div>
             <div class="fila">
                 <div class="recuadro">
-                    <img src="/img/galeria/galeria4.jpeg" alt="laboratorio1">
+                    <img src="/img/galeria/galeria4.jpeg" alt="laboratorio4" onclick="mostrarImagen(3)">
                 </div>
                 <div class="recuadro">
-                    <img src="/img/galeria/galeria5.jpeg" alt="laboratorio1">
+                    <img src="/img/galeria/galeria5.jpeg" alt="laboratorio5" onclick="mostrarImagen(4)">
                 </div>
                 <div class="recuadro">
-                    <img src="/img/galeria/galeria6.jpeg" alt="laboratorio1">
+                    <img src="/img/galeria/galeria6.jpeg" alt="laboratorio6" onclick="mostrarImagen(5)">
                 </div>
             </div>
             <div class="fila">
                 <div class="recuadro">
-                    <img src="/img/galeria/galeria7.jpeg" alt="laboratorio1">
+                    <img src="/img/galeria/galeria7.jpeg" alt="laboratorio7" onclick="mostrarImagen(6)">
                 </div>
                 <div class="recuadro">
-                    <img src="/img/galeria/galeria8.jpeg" alt="laboratorio1">
+                    <img src="/img/galeria/galeria8.jpeg" alt="laboratorio8" onclick="mostrarImagen(7)">
                 </div>
                 <div class="recuadro">
-                    <img src="/img/galeria/galeria9.jpeg" alt="laboratorio1">
+                    <img src="/img/galeria/galeria9.jpeg" alt="laboratorio9" onclick="mostrarImagen(8)">
                 </div>
-              
+            </div>
+        </div>
+        <!-- Modal de imagen -->
+        <div id="modalImagen" class="modal-imagen">
+            <span class="close" onclick="cerrarModalImagen()">&times;</span>
+            <img id="imagenAmpliada" class="imagen-ampliada" src="" alt="imagen">
+            <div class="navegacion-imagen">
+                <button  onclick="anteriorImagen()" class="boton-navegacion" style="margin-left:150px">&#9664;</button>
+                <button onclick="siguienteImagen()" class="boton-navegacion"  style="margin-right:150px">&#9654;</button>
             </div>
         </div>
     </section>
-   
+        <!--SECTION CONTACTO-->
     <section id="contacto" class="container-contacto">
-            <h2 class="titulo-co">Contáctame</h2>
-        </div>
+        <h2 class="titulo-contacto">Contáctame</h2>
         <div class="fila-contacto">
             <div class="ubicacion">
                 <img src="ubicacion.png" alt="Ubicación de la empresa">
             </div>
             <div class="formulario-contacto">
-                <form action="#" method="post">
+                <form id="contactForm" action="#" method="post" onsubmit="modalContacto(); return false;">
                     <label for="nombre" style="margin-left: 10px;">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" required>
-        
+    
                     <label for="email" style="margin-left: 10px;">Email:</label>
                     <input type="email" id="email" name="email" required>
-        
+    
                     <label for="Asunto" style="margin-left: 10px;">Asunto:</label>
                     <input type="text" id="Asunto" name="Asunto" required>
-        
+    
                     <label for="mensaje" style="margin-left: 10px;">Mensaje:</label>
                     <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-        
+    
                     <input type="submit" value="Enviar" style="margin-left: 10px;">
                 </form>
             </div>
         </div>
     </section>
-    
+    <!-- Modal de confirmación -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="cerrarModal()">&times;</span>
+        <div class="modal-content">
+            <p>Por favor, confirma tus detalles:</p>
+            <p><strong>Nombre:</strong> <span id="confirmNombre"></span></p>
+            <p><strong>Email:</strong> <span id="confirmEmail"></span></p>
+            <p><strong>Asunto:</strong> <span id="confirmAsunto"></span></p>
+            <p><strong>Mensaje:</strong> <span id="confirmMensaje"></span></p>
+            <p>¡Gracias por contactar con nosotros! Nos pondremos en contacto contigo lo antes posible.</p>
+            <div class="opciones">
+                <button onclick="enviarFormulario()">Aceptar</button>
+                <button onclick="cerrarModal()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+         <!--FOOTER-->
     <footer>
         <p>&copy;QuimicaXPS</p>
     </footer>
