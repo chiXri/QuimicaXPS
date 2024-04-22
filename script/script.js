@@ -26,6 +26,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+//QUIENES SOMOS 
+function toggleAcordeon(id) {
+    var contenido = document.getElementById(id + "-contenido");
+    var acordeones = document.getElementsByClassName("acordeon-contenido");
+    for (var i = 0; i < acordeones.length; i++) {
+        if (acordeones[i] !== contenido) {
+            acordeones[i].style.display = "none";
+        }
+    }
+    contenido.style.display = contenido.style.display === "block" ? "none" : "block";
+}
+
+
+//PRODUCTOS
 document.addEventListener('DOMContentLoaded', function() {
     const productos = document.querySelectorAll('.producto');
     productos.forEach(producto => {
@@ -36,22 +51,23 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 //MODAL GALERIA
-
 var imagenes = document.querySelectorAll(".recuadro img");
 var modal = document.getElementById("modalImagen");
 var imagenAmpliada = document.getElementById("imagenAmpliada");
 var currentIndex = 0;
-
+/// Función para mostrar el lightbox con la imagen ampliada
 function mostrarImagen(index) {
     currentIndex = index;
     imagenAmpliada.src = imagenes[index].src;
     modal.style.display = "block";
 }
 
+// Función para cerrar el modal de la imagen
 function cerrarModalImagen() {
     modal.style.display = "none";
 }
 
+// Función para mostrar la siguiente imagen en el lightbox
 function siguienteImagen() {
     currentIndex++;
     if (currentIndex >= imagenes.length) {
@@ -60,19 +76,13 @@ function siguienteImagen() {
     imagenAmpliada.src = imagenes[currentIndex].src;
 }
 
+// Función para mostrar la imagen anterior en el lightbox
 function anteriorImagen() {
     currentIndex--;
     if (currentIndex < 0) {
         currentIndex = imagenes.length - 1;
     }
     imagenAmpliada.src = imagenes[currentIndex].src;
-}
-
-// Cerrar modal al hacer clic fuera de la imagen
-window.onclick = function(event) {
-    if (event.target == modal) {
-        cerrarModalImagen();
-    }
 }
 
 
