@@ -1,0 +1,19 @@
+Pendiente =>
+SECTION MENU
+- Revisar el efecto de slide show:
+introducir un modal de bienvenida dándole algún toque de efecto al titulo al subtitulo como que aparezca de repente o un sobreado etc. 
+- Añadir que el menú debe estar presente pero ocultarse siempre y cuando se haga scroll hacia arriba si haces scroll hacia abajo se oculta
+
+SECTION PRODUCTOS
+-Debe ser como una librería ,(quitar el botón si no un efecto que cuando estes encima de la categoría producto se encima (hover) y te muestre los productos que son), eso productos (img) que salgan de alguna manera con alguna animación.
+-Filtro
+
+SECTION GALERIA
+-En la galería animación cuando se cargan las fotos , no tan estatico y mejorar las flechas de pasar de foto.
+
+SECTION FOOTER 
+-footer mejorar (redes )
+
+PLUS
+-	Tooltip
+-	parallax
