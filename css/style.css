@@ -256,27 +256,32 @@ nav ul li a:hover {
 .productos h2 {
     font-size: 4rem;
 }
-
 .categorias {
-    margin-top: -20px; 
-    color: #0e4bae;
+    margin-top: 20px; /* Ajusta el margen superior */
+    color: #5a5a5a;
+    display: flex;
+    justify-content: center;
+    font-size: 19px;
+    font-weight: bold;
 }
 
 .categorias .categoria {
     text-align: center;
-    display: inline-block;
-    width: 90px;
-    margin: 0 10px;
-    padding: 10px 20px;
-    border: 2px solid #0e4bae;
-    border-radius: 5px;
+    margin: 0 30px; /* Ajusta el margen horizontal */
+    padding: 15px 0; /* Ajusta el padding vertical */
+    border-bottom: 2px solid transparent;
     cursor: pointer;
+    transition: border-bottom-color 0.3s ease;
 }
 
-/* Estilo cuando se pasa el ratón por encima */
+.categorias .categoria.selected {
+    color: rgba(22, 102, 194);
+    border-bottom-color: #0e4bae; /* Cambia el color de la línea inferior para la categoría seleccionada */
+}
+
 .categorias .categoria:hover {
-    background-color: #0e4bae;
-    color: #ffffff;
+    color: rgba(22, 102, 194);
+    border-bottom-color: rgba(22, 102, 194); /* Cambia el color de la línea inferior al hacer hover */
 }
 
 /* Estilo para la categoría seleccionada */
@@ -353,6 +358,15 @@ nav ul li a:hover {
     height: 90vh;
     padding: 70px 0;
 }
+.galeria-container .recuadro img {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.galeria-container .recuadro img.loaded {
+    opacity: 1;
+}
+
 
 .titulo {
     font-size: 4rem;
@@ -380,12 +394,18 @@ nav ul li a:hover {
     border: 1px solid #ccc;
     margin: 0 10px;
 }
-
 .recuadro img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Agregamos box-shadow a la transición */
 }
+
+.recuadro img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.7); /* Efecto de sombra azul al hacer hover */
+}
+
 
 .modal-imagen {
     display: none;
@@ -417,18 +437,26 @@ nav ul li a:hover {
 }
 
 .boton-navegacion {
-    background-color: transparent;
-    border: none;
-    color: #fff;
-    font-size: 36px; /* Tamaño de fuente */
+    background-color: #ccc; /* Fondo gris */
+    border-color:rgba(22, 102, 194, 0.5); /* Efecto de sombra azul al hacer hover */
+    color: rgba(255, 255, 255, 0.8); /* Color de las flechas */
+    font-size: 36px;
     cursor: pointer;
     transition: color 0.3s ease;
-    padding: 10px; /* Espaciado interno */
+    padding: 10px;
+    border-radius: 50%; /* Hace que el botón sea un círculo */
+    width: 60px; /* Ancho y alto iguales para hacer un círculo */
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.5); /* Sombra azul */
 }
 
 .boton-navegacion:hover {
-    color: #0e4bae;
+    color: #0e4bae; /* Color de las flechas al hacer hover */
 }
+
 
 .close-imagen {
     color: #fff;

@@ -10,22 +10,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const categorias = document.querySelectorAll('.categoria');
-    categorias.forEach(categoria => {
-        categoria.addEventListener('click', () => {
-            const categoriaSeleccionada = categoria.getAttribute('data-category');
-            const productos = document.querySelectorAll('.producto');
-            productos.forEach(producto => {
-                if (producto.classList.contains(categoriaSeleccionada)) {
-                    producto.style.display = 'block';
-                } else {
-                    producto.style.display = 'none';
-                }
-            });
-        });
-    });
-});
 
 //QUIENES SOMOS 
 function toggleAcordeon(id) {
@@ -42,19 +26,35 @@ function toggleAcordeon(id) {
 
 //PRODUCTOS
 document.addEventListener('DOMContentLoaded', function() {
-    const productos = document.querySelectorAll('.producto');
-    productos.forEach(producto => {
-        if (!producto.classList.contains('disolvente')) {
-            producto.style.display = 'none';
-        }
+    const categorias = document.querySelectorAll('.categoria');
+    categorias.forEach(categoria => {
+        categoria.addEventListener('click', () => {
+            // Eliminar la clase 'selected' de todas las categorías
+            categorias.forEach(c => c.classList.remove('selected'));
+            
+            // Agregar la clase 'selected' solo a la categoría clicada
+            categoria.classList.add('selected');
+        });
     });
 });
+
+
+
+
+
 
 //MODAL GALERIA
 var imagenes = document.querySelectorAll(".recuadro img");
 var modal = document.getElementById("modalImagen");
 var imagenAmpliada = document.getElementById("imagenAmpliada");
 var currentIndex = 0;
+
+window.addEventListener('load', function() {
+    imagenes.forEach(function(img) {
+        img.classList.add('loaded');
+    });
+});
+
 /// Función para mostrar el lightbox con la imagen ampliada
 function mostrarImagen(index) {
     currentIndex = index;
@@ -84,6 +84,7 @@ function anteriorImagen() {
     }
     imagenAmpliada.src = imagenes[currentIndex].src;
 }
+
 
 
 //MODAL CONTACTO
