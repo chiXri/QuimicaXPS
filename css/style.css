@@ -5,9 +5,6 @@ body {
     font-family:'Poppins', sans-serif;
     position: relative; /* Añadido */
 }
-html {
-    scroll-behavior: smooth;
-}
 
 
 /* HEADER */
@@ -286,9 +283,7 @@ nav ul li a:hover {
 
 /* Estilo para la categoría seleccionada */
 .selected {
-    background-color: #0e4bae;
-    color: #ffffff;
-}
+    color: rgba(22, 102, 194);}
 
 /* Estilo para ocultar los productos que no corresponden a la categoría seleccionada */
 .producto {
@@ -350,9 +345,7 @@ nav ul li a:hover {
 .producto:hover .info-producto i {
     transform: scale(1.2);
 }
-/*galeria container*/
-/* Tus estilos CSS existentes aquí */
-
+/*GALERIA*/
 .galeria-container {
     text-align: center;
     height: 90vh;
