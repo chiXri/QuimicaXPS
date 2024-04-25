@@ -24,12 +24,15 @@ nav {
     transition-property: top;
     transition-duration: 0.75s;
     transform: translateY(-5px); /* Desplaza hacia arriba 5px al pasar el mouse */
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5); /* Agrega un sombreado alrededor del texto */
+
 }
 
 
 nav ul {
     list-style: none;
     margin: 0;
+    margin-top:30px;
     padding: 0;
 }
 
@@ -73,9 +76,16 @@ nav ul li a:hover {
     width: 33.333%; /* Ancho de cada imagen */
     height: 100%;
     background-size: cover;
+}.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    opacity: 0;
 }
 
-/* Estilos para el contenido */
 .hero-content {
     position: absolute;
     top: 50%;
@@ -83,18 +93,35 @@ nav ul li a:hover {
     transform: translate(-50%, -50%);
     text-align: center;
     color: #fff;
+    opacity: 0;
 }
 
 .hero-content h1 {
-    font-size: 8rem;
+    font-size: 4rem; /* Ajusta el tamaño del título */
     margin-bottom: 10px;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5); /* Agrega un sombreado alrededor del texto */
 }
 
 .hero-content h2 {
-    font-size: 2rem;
+    font-size: 2rem; /* Ajusta el tamaño del subtítulo */
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5); /* Agrega un sombreado alrededor del texto */
 }
 
+.show {
+    opacity: 1;
+    animation: zoomIn 1s forwards ease-in-out; /* Aplica la animación de zoom */
+}
 
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5); /* Inicia con un tamaño reducido y centrado */
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1); /* Termina con el tamaño normal y centrado */
+    }
+}
 
 
 

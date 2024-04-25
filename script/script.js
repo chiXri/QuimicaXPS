@@ -31,7 +31,7 @@ window.addEventListener("scroll", function() {
 
     if (currentScroll > lastScrollTop) {
         // Scroll hacia abajo
-        document.querySelector("nav").style.top = "-50px"; // Oculta el menú
+        document.querySelector("nav").style.top = "-80px"; // Oculta el menú
     } else {
         // Scroll hacia arriba
         document.querySelector("nav").style.top = "0"; // Muestra el menú
@@ -48,6 +48,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             behavior: 'smooth'
         });
     });
+});
+
+//TITULO MENU
+document.addEventListener("DOMContentLoaded", function() {
+    const heroContent = document.querySelector('.hero-content');
+    heroContent.classList.add('show');
 });
 
 
@@ -77,19 +83,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     categorias.forEach(categoria => {
         categoria.addEventListener('click', () => {
-            // Eliminar la clase 'selected' de todas las categorías
             categorias.forEach(c => c.classList.remove('selected'));
             
-            // Agregar la clase 'selected' solo a la categoría clicada
             categoria.classList.add('selected');
 
-            // Ocultar todos los productos
             productos.forEach(producto => producto.classList.remove('mostrar'));
 
-            // Obtener la categoría seleccionada
             const categoriaSeleccionada = categoria.getAttribute('data-category');
 
-            // Mostrar solo los productos de la categoría seleccionada
             productos.forEach(producto => {
                 if (producto.classList.contains(categoriaSeleccionada)) {
                     producto.classList.add('mostrar');
@@ -180,4 +181,3 @@ function enviarFormulario() {
     
     cerrarModal();
 }
-
