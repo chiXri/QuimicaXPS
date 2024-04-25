@@ -1,6 +1,29 @@
+/******* HEROIMAGE SLIDE ********/
 
-//Menu
+document.addEventListener("DOMContentLoaded", function() {
+    let currentSlide = 0;
+    const totalSlides = document.querySelectorAll('.slide').length;
+    const slideWidth = document.querySelector('.slide').offsetWidth;
 
+    //Ajustte en el margen, ya que se veia parte de la anterior img.
+    document.querySelectorAll('.slide').forEach(slide => {
+        slide.style.marginLeft = `-${currentSlide * slideWidth}px`;
+    });
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlide();
+    }
+
+    function updateSlide() {
+        const offset = -currentSlide * slideWidth;
+        document.querySelector('.slides-container').style.transform = `translateX(${offset}px)`;
+    }
+
+    setInterval(nextSlide, 30000); // Cambia de slide cada 30 segundos (30000 ms)
+});
+
+/******* NAV ********/
 let lastScrollTop = 0;
 
 window.addEventListener("scroll", function() {
@@ -28,7 +51,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
-//QUIENES SOMOS 
+/******* QUIENES SOMOS ********/
 function toggleAcordeon(id) {
     var contenido = document.getElementById(id + "-contenido");
     var acordeones = document.getElementsByClassName("acordeon-contenido");
@@ -39,6 +62,8 @@ function toggleAcordeon(id) {
     }
     contenido.style.display = contenido.style.display === "block" ? "none" : "block";
 }
+/******* PRODUCTOS ********/
+
 document.addEventListener('DOMContentLoaded', function() {
     const categorias = document.querySelectorAll('.categoria');
     const productos = document.querySelectorAll('.producto');
@@ -76,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-//MODAL GALERIA
+/******* MODAL GALERIA ********/
 var imagenes = document.querySelectorAll(".recuadro img");
 var modal = document.getElementById("modalImagen");
 var imagenAmpliada = document.getElementById("imagenAmpliada");
@@ -120,7 +145,8 @@ function anteriorImagen() {
 
 
 
-//MODAL CONTACTO
+/******* MODAL CONTACTO ********/
+
 
 function modalContacto() {
     // Obtener los valores de los campos del formulario
@@ -142,7 +168,6 @@ function modalContacto() {
 }
 
 function cerrarModal() {
-    // Cerrar el modal
     document.getElementById("myModal").style.display = "none";
 }
 
@@ -153,7 +178,6 @@ function enviarFormulario() {
     document.getElementById("Asunto").value = "";
     document.getElementById("mensaje").value = "";
     
-    // Cerrar el modal
     cerrarModal();
 }
 
